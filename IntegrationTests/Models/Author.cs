@@ -21,9 +21,12 @@ namespace IntegrationTests.Models
         [JsonProperty("genre", NullValueHandling = NullValueHandling.Ignore)]
         public string Genre { get; set; }
 
+        [JsonProperty("links", NullValueHandling = NullValueHandling.Ignore)]
+        public List<Link> Links { get; set; }
+
         [JsonProperty("books", NullValueHandling = NullValueHandling.Ignore)]
         public List<Book> Books { get; set; }
 
-        public static Author FromJson(string json) => JsonConvert.DeserializeObject<Author>(json, IntegrationTests.Methods.Converter.Settings);
+        public static Author FromJson(string json) => JsonConvert.DeserializeObject<Author>(json, IntegrationTests.Models.Converter.Settings);
     }
 }

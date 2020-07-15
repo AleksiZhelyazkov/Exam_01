@@ -22,18 +22,6 @@ namespace IntegrationTests.Models
         public List<Link> Links { get; set; }
 
         public static Book FromJson(string json) =>
-            JsonConvert.DeserializeObject<Book>(json, IntegrationTests.Methods.Converter.Settings);
-    }
-
-    public partial class Link
-    {
-        [JsonProperty("href", NullValueHandling = NullValueHandling.Ignore)]
-        public Uri Href { get; set; }
-
-        [JsonProperty("rel", NullValueHandling = NullValueHandling.Ignore)]
-        public string Rel { get; set; }
-
-        [JsonProperty("method", NullValueHandling = NullValueHandling.Ignore)]
-        public string Method { get; set; }
+            JsonConvert.DeserializeObject<Book>(json, IntegrationTests.Models.Converter.Settings);
     }
 }

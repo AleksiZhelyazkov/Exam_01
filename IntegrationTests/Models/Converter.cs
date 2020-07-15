@@ -1,9 +1,8 @@
-﻿using IntegrationTests.Models;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.Globalization;
 
-namespace IntegrationTests.Methods
+namespace IntegrationTests.Models
 {
     public static class Converter
     {
