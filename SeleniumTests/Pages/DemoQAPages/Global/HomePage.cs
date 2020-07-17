@@ -1,6 +1,6 @@
 ﻿using OpenQA.Selenium;
 
-namespace SeleniumTests.Pages.DemoQA
+namespace SeleniumTests.Pages.DemoQAPages
 {
     public class HomePage : BasePage
     {

@@ -11,15 +11,13 @@ namespace SeleniumTests.Pages
         {
             Driver = driver;
             Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(3);
-
-            Actions = new Actions(driver);
-
-            var Wait = new WebDriverWait(driver, TimeSpan.FromSeconds(3));
+            Action = new Actions(Driver);
+            Wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(3));
         }
-        protected Actions Builder { get; set; }
-        public IWebDriver Driver { get; private set; }
-        public WebDriverWait Wait { get; set; }
-        public Actions Actions { get; set; }
+        //protected Actions Builder { get;}
+        public IWebDriver Driver { get;}
+        public WebDriverWait Wait { get;}
+        public Actions Action { get;}
         public void WaitForLoad(int timeoutSec = 15)
         {
             IJavaScriptExecutor js = (IJavaScriptExecutor)Driver;
